@@ -1,68 +1,220 @@
 {
-  "questions": [
+  "dimensions": [
     {
-      "key": "q1",
-      "level": "communication",
-      "question": "当我给出建议时，你更希望：",
-      "options": [
-        { "value": "A", "label": "直说结论，不废话", "implication": "用户偏好高效沟通，不喜欢冗长解释" },
-        { "value": "B", "label": "告诉我"为什么"，让我自己判断", "implication": "用户需要理解决策背后的逻辑" },
-        { "value": "C", "label": "先问我想怎么选，陪我推演", "implication": "用户希望参与决策过程，而非被动接受" }
+      "id": "cognitive",
+      "name": "认知处理风格",
+      "description": "你如何处理和理解信息",
+      "questions": [
+        {
+          "key": "c1",
+          "question": "学习新东西时，你通常：",
+          "options": [
+            { "value": "A", "label": "先搭整体框架，再填细节", "trait": "整体型", "weight": 1 },
+            { "value": "B", "label": "从具体例子开始，慢慢拼出全貌", "trait": "细节型", "weight": 1 },
+            { "value": "C", "label": "边做边学，在实战中理解", "trait": "实践型", "weight": 1 },
+            { "value": "D", "label": "先问为什么要学这个，再找意义", "trait": "意义型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "c2",
+          "question": "面对一个复杂概念，什么最能帮你理解？",
+          "options": [
+            { "value": "A", "label": "类比和比喻（就像...）", "trait": "类比型", "weight": 1 },
+            { "value": "B", "label": "逻辑拆解（第一、第二、第三）", "trait": "逻辑型", "weight": 1 },
+            { "value": "C", "label": "可视化的图或流程", "trait": "视觉型", "weight": 1 },
+            { "value": "D", "label": "具体的数字和案例", "trait": "数据型", "weight": 1 },
+            { "value": "E", "label": "相关的故事或背景", "trait": "叙事型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "c3",
+          "question": "你更容易记住什么类型的信息？",
+          "options": [
+            { "value": "A", "label": "逻辑链条（因为A所以B）", "trait": "逻辑记忆", "weight": 1 },
+            { "value": "B", "label": "画面和场景", "trait": "视觉记忆", "weight": 1 },
+            { "value": "C", "label": "感受和情绪", "trait": "情感记忆", "weight": 1 },
+            { "value": "D", "label": "故事和情节", "trait": "叙事记忆", "weight": 1 }
+          ]
+        }
       ]
     },
     {
-      "key": "q2",
-      "level": "communication",
-      "question": "如果我看出你在想错方向：",
-      "options": [
-        { "value": "A", "label": "直接打断："你这里错了"", "implication": "用户能接受直接反馈，不玻璃心" },
-        { "value": "B", "label": "旁敲侧击让你自己发现", "implication": "用户更喜欢自我觉察而非被灌输" },
-        { "value": "C", "label": "顺着你说完，最后再提", "implication": "用户需要被倾听，纠错需要时机" },
-        { "value": "D", "label": "看心情 / 看事", "implication": "用户需要灵活应对，没有固定模式" }
+      "id": "communication",
+      "name": "沟通偏好",
+      "description": "你希望如何被对待和回应",
+      "questions": [
+        {
+          "key": "m1",
+          "question": "当我给你建议时，你更希望：",
+          "options": [
+            { "value": "A", "label": "直接说结论，细节我自己会问", "trait": "结论优先", "weight": 1 },
+            { "value": "B", "label": "告诉我为什么，让我判断", "trait": "理据优先", "weight": 1 },
+            { "value": "C", "label": "给出几个选项，让我选", "trait": "选项优先", "weight": 1 },
+            { "value": "D", "label": "先问我的想法，陪我推演", "trait": "共创型", "weight": 1 },
+            { "value": "E", "label": "视情况而定，没有固定偏好", "trait": "灵活型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "m2",
+          "question": "如果我看出你想错了，你希望我怎么处理？",
+          "options": [
+            { "value": "A", "label": "直接说\"你错了\"，然后给出正确答案", "trait": "直接纠偏", "weight": 1 },
+            { "value": "B", "label": "用问题引导你自己发现", "trait": "引导发现", "weight": 1 },
+            { "value": "C", "label": "先听完，然后委婉指出", "trait": "委婉纠偏", "weight": 1 },
+            { "value": "D", "label": "看严重程度，轻微的错误无所谓", "trait": "容错型", "weight": 1 },
+            { "value": "E", "label": "看关系亲疏，熟了才直接说", "trait": "关系敏感", "weight": 1 }
+          ]
+        },
+        {
+          "key": "m3",
+          "question": "你觉得自己目前的情绪状态如何影响我们的对话？",
+          "options": [
+            { "value": "A", "label": "我情绪不好时需要被安慰，先处理情绪", "trait": "情绪优先", "weight": 1 },
+            { "value": "B", "label": "情绪不好时更需要快速解决问题", "trait": "解决问题型", "weight": 1 },
+            { "value": "C", "label": "情绪不好时希望暂停，等我准备好了再说", "trait": "自主型", "weight": 1 },
+            { "value": "D", "label": "情绪对对话影响不大，可以正常交流", "trait": "情绪稳定", "weight": 1 }
+          ]
+        },
+        {
+          "key": "m4",
+          "question": "什么样的回复长度最让你舒服？",
+          "options": [
+            { "value": "A", "label": "越短越好，一句话能说明白就别用两句", "trait": "极简型", "weight": 1 },
+            { "value": "B", "label": "中等长度，有要点但不过度展开", "trait": "适中型", "weight": 1 },
+            { "value": "C", "label": "详细一些，宁可多给信息也别让我追问", "trait": "详细型", "weight": 1 },
+            { "value": "D", "label": "看情况，简单问题短答，复杂问题详述", "trait": "情境型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "m5",
+          "question": "你更在意 AI 回复中的什么？",
+          "options": [
+            { "value": "A", "label": "准确性 - 信息要对，逻辑要通", "trait": "准确优先", "weight": 1 },
+            { "value": "B", "label": "有用性 - 能真正帮到我解决问题", "trait": "实用优先", "weight": 1 },
+            { "value": "C", "label": "共鸣感 - 感觉被理解和接纳", "trait": "情感优先", "weight": 1 },
+            { "value": "D", "label": "启发性 - 给我新的视角和想法", "trait": "启发优先", "weight": 1 },
+            { "value": "E", "label": "效率 - 快速得到我想要的", "trait": "效率优先", "weight": 1 }
+          ]
+        }
       ]
     },
     {
-      "key": "q3",
-      "level": "rhythm",
-      "question": "你一般在什么状态下会来找我？",
-      "options": [
-        { "value": "A", "label": "卡住了，需要救命", "implication": "用户把AI当作紧急支援" },
-        { "value": "B", "label": "脑子里乱，需要理清楚", "implication": "用户需要clarity，而非直接答案" },
-        { "value": "C", "label": "想搞点新东西，找人碰撞", "implication": "用户把AI当作创意伙伴" },
-        { "value": "D", "label": "没事就聊两句", "implication": "用户把AI当作陪伴/日常互动" }
+      "id": "decision",
+      "name": "决策风格",
+      "description": "你如何做决定",
+      "questions": [
+        {
+          "key": "d1",
+          "question": "面对一个选择，你通常：",
+          "options": [
+            { "value": "A", "label": "凭直觉，第一反应往往是对的", "trait": "直觉型", "weight": 1 },
+            { "value": "B", "label": "列出利弊，理性分析后决定", "trait": "分析型", "weight": 1 },
+            { "value": "C", "label": "先试试看，在行动中调整", "trait": "实验型", "weight": 1 },
+            { "value": "D", "label": "问问信任的人，参考他们的意见", "trait": "咨询型", "weight": 1 },
+            { "value": "E", "label": "纠结很久，直到不得不选", "trait": "犹豫型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "d2",
+          "question": "做重要决定时，什么信息对你最关键？",
+          "options": [
+            { "value": "A", "label": "可能的风险和 worst case", "trait": "风险意识", "weight": 1 },
+            { "value": "B", "label": "最好的结果和机会", "trait": "机会导向", "weight": 1 },
+            { "value": "C", "label": "其他人的经验和案例", "trait": "经验依赖", "weight": 1 },
+            { "value": "D", "label": "自己内心的真实感受", "trait": "内在导向", "weight": 1 },
+            { "value": "E", "label": "数据和事实依据", "trait": "数据导向", "weight": 1 }
+          ]
+        },
+        {
+          "key": "d3",
+          "question": "如果 AI 帮你做了一个决定，但后来发现是错的，你会：",
+          "options": [
+            { "value": "A", "label": "生气，觉得被误导了", "trait": "外部归因", "weight": 1 },
+            { "value": "B", "label": "反思自己为什么会接受这个建议", "trait": "内部归因", "weight": 1 },
+            { "value": "C", "label": "无所谓，反正我也可能选错", "trait": "容错型", "weight": 1 },
+            { "value": "D", "label": "以后会更谨慎地评估 AI 的建议", "trait": "学习调整", "weight": 1 }
+          ]
+        }
       ]
     },
     {
-      "key": "q4",
-      "level": "rhythm",
-      "question": "什么时候该喊停？",
-      "options": [
-        { "value": "A", "label": "我自己说"够了"", "implication": "用户会主动表达边界" },
-        { "value": "B", "label": "你开始重复同一个点时", "implication": "用户对冗余信息敏感" },
-        { "value": "C", "label": "我感觉你在push我时", "implication": "用户对被push敏感，需要尊重节奏" },
-        { "value": "D", "label": "你不需要管，我不会累", "implication": "用户可以长时间专注，不需要被照顾" }
+      "id": "trust",
+      "name": "信任建立",
+      "description": "什么让你感到被理解和信任",
+      "questions": [
+        {
+          "key": "t1",
+          "question": "什么样的瞬间会让你觉得\"这人懂我\"？",
+          "options": [
+            { "value": "A", "label": "说出了我没说出口的话", "trait": "深度洞察", "weight": 1 },
+            { "value": "B", "label": "记住了我之前随口提的小事", "trait": "细节关注", "weight": 1 },
+            { "value": "C", "label": "在我犹豫时给了恰到好处的支持", "trait": "时机敏感", "weight": 1 },
+            { "value": "D", "label": "敢怼我，且怼得对", "trait": "真诚反馈", "weight": 1 },
+            { "value": "E", "label": "陪我聊了很久，从不厌倦", "trait": "陪伴型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "t2",
+          "question": "你会把什么类型的事告诉AI？（多选）",
+          "type": "multi",
+          "options": [
+            { "value": "work", "label": "工作上的困惑和决策", "trait": "工作信任", "weight": 1 },
+            { "value": "relation", "label": "人际关系的烦恼", "trait": "关系信任", "weight": 1 },
+            { "value": "emotion", "label": "真实的情绪和脆弱", "trait": "情感信任", "weight": 1 },
+            { "value": "idea", "label": "疯狂的想法和不成熟的计划", "trait": "创意信任", "weight": 1 },
+            { "value": "secret", "label": "不会告诉别人的秘密", "trait": "深度信任", "weight": 1 }
+          ]
+        },
+        {
+          "key": "t3",
+          "question": "AI 的什么行为会让你立刻失去信任？",
+          "options": [
+            { "value": "A", "label": "说错事实或给出错误信息", "trait": "准确敏感", "weight": 1 },
+            { "value": "B", "label": "忽视我的感受，只给冷冰冰的建议", "trait": "情感敏感", "weight": 1 },
+            { "value": "C", "label": "频繁打断我，不让我说完", "trait": "尊重敏感", "weight": 1 },
+            { "value": "D", "label": "过度热情，感觉不真诚", "trait": "真诚敏感", "weight": 1 },
+            { "value": "E", "label": "听不懂我的意思，各说各的", "trait": "理解敏感", "weight": 1 }
+          ]
+        }
       ]
     },
     {
-      "key": "q5",
-      "level": "trust",
-      "question": "你觉得"这人懂我"的瞬间通常是因为：",
-      "options": [
-        { "value": "A", "label": "说出了我没说出口的话", "implication": "用户重视被深刻理解" },
-        { "value": "B", "label": "记住了我之前随口提的小事", "implication": "用户重视被记住和关注" },
-        { "value": "C", "label": "在我犹豫时给了恰到好处的支持", "implication": "用户重视时机恰当的支持" },
-        { "value": "D", "label": "敢怼我，且怼得对", "implication": "用户重视真诚和建设性冲突" }
-      ]
-    },
-    {
-      "key": "q6",
-      "level": "trust",
-      "question": "什么样的事你只会跟熟人说？（边界探测器）",
-      "options": [
-        { "value": "A", "label": "具体的困难 / 糗事", "implication": "用户的脆弱面需要信任基础" },
-        { "value": "B", "label": "真正的动机（不只是表面理由）", "implication": "用户隐藏深层动机，需要时间建立信任" },
-        { "value": "C", "label": "对别人的负面看法", "implication": "用户对分享负面评价谨慎" },
-        { "value": "D", "label": "几乎不说，包括熟人", "implication": "用户边界很强，AI不应主动打探" }
+      "id": "boundary",
+      "name": "边界与节奏",
+      "description": "你需要怎样的空间和节奏",
+      "questions": [
+        {
+          "key": "b1",
+          "question": "你通常在什么情况下找 AI？",
+          "options": [
+            { "value": "A", "label": "卡住了，需要救命", "trait": "急救型", "weight": 1 },
+            { "value": "B", "label": "脑子乱，需要理清思路", "trait": "梳理型", "weight": 1 },
+            { "value": "C", "label": "想碰撞新想法，需要刺激", "trait": "创意型", "weight": 1 },
+            { "value": "D", "label": "没事就聊两句，打发时间", "trait": "陪伴型", "weight": 1 },
+            { "value": "E", "label": "学习新东西，系统性获取知识", "trait": "学习型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "b2",
+          "question": "什么时候你觉得对话该结束了？",
+          "options": [
+            { "value": "A", "label": "我自己说\"够了\"", "trait": "自主控制", "weight": 1 },
+            { "value": "B", "label": "你开始重复同样的内容", "trait": "冗余敏感", "weight": 1 },
+            { "value": "C", "label": "我感觉你在 push 我", "trait": "压力敏感", "weight": 1 },
+            { "value": "D", "label": "问题解决了就行，不需要废话", "trait": "目标导向", "weight": 1 },
+            { "value": "E", "label": "一般不会觉得，想聊多久都行", "trait": "开放型", "weight": 1 }
+          ]
+        },
+        {
+          "key": "b3",
+          "question": "你希望和 AI 保持什么样的关系距离？",
+          "options": [
+            { "value": "A", "label": "专业助手，有事说事", "trait": "专业距离", "weight": 1 },
+            { "value": "B", "label": "像朋友一样，可以闲聊", "trait": "朋友距离", "weight": 1 },
+            { "value": "C", "label": "像教练或导师，给我指导", "trait": "指导距离", "weight": 1 },
+            { "value": "D", "label": "像伙伴，一起探索", "trait": "伙伴距离", "weight": 1 }
+          ]
+        }
       ]
     }
   ]

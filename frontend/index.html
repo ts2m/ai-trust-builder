@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trust Builder - 快速建立信任</title>
+    <title>AI Trust Builder - 深度互动画像</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,15 +13,16 @@
             <div class="hero">
                 <div class="logo">🤝</div>
                 <h1>AI Trust Builder</h1>
-                <p class="subtitle">3分钟，让 AI 真正了解你</p>
+                <p class="subtitle">让 AI 真正懂你</p>
                 <p class="description">
-                    不是无聊的 MBTI 测试，而是真正能改变 AI 如何对待你的「互动协议」。
-                    <br>答完即用，立即生效。
+                    基于认知科学和人格心理学的深度测评<br>
+                    生成个性化的 AI 互动指南，不只是标签
                 </p>
             </div>
             <div class="start-section">
                 <input type="text" id="user-id" placeholder="输入你的名字或ID" class="input-field">
-                <button id="start-btn" class="btn-primary">开始问卷</button>
+                <button id="start-btn" class="btn-primary" disabled>加载中...</button>
+                <p class="duration-hint">约 5-8 分钟 · 16 道精选问题</p>
             </div>
         </div>
 
@@ -31,13 +32,14 @@
                 <div class="progress-fill" id="progress-fill"></div>
             </div>
             <div class="progress-text">
-                <span id="current-level">第一关</span>
-                <span id="question-counter">1/6</span>
+                <span id="current-level">维度名称</span>
+                <span id="question-counter">1/16</span>
             </div>
 
-            <div class="question-card" id="question-card">
-                <div class="level-badge" id="level-badge">🗣️ 沟通偏好</div>
-                <h2 id="question-text" class="question-text"></h2>
+            <div class="question-card">
+                <div class="level-badge" id="level-badge">维度</div>
+                <p class="dimension-desc" id="dimension-desc">维度描述</p>
+                <h2 id="question-text" class="question-text">问题内容</h2>
                 <div id="options-container" class="options-container"></div>
             </div>
 
@@ -50,25 +52,47 @@
         <div id="result-screen" class="screen">
             <div class="result-header">
                 <div class="success-icon">✨</div>
-                <h1>问卷完成！</h1>
-                <p>你的 User Profile 已生成</p>
+                <h1>你的深度画像已完成</h1>
+                <p>基于 16 个维度的分析结果</p>
             </div>
 
-            <div class="result-card">
-                <h3>📊 你的 AI 互动画像</h3>
-                <div id="result-summary" class="result-summary"></div>
+            <!-- 人格原型卡片 -->
+            <div class="archetype-card">
+                <div class="archetype-icon">🎭</div>
+                <h2 id="archetype-name">人格类型</h2>
+                <p id="archetype-desc">人格描述</p>
             </div>
 
+            <!-- 统计信息 -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">16</span>
+                    <span class="stat-label">测评维度</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">核心领域</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="trait-count">0</span>
+                    <span class="stat-label">特质标签</span>
+                </div>
+            </div>
+
+            <!-- 详细报告 -->
+            <div id="report-content" class="report-content"></div>
+
+            <!-- 行动按钮 -->
             <div class="action-buttons">
                 <button id="download-btn" class="btn-primary">
-                    <span class="icon">📥</span> 下载 USER.md
+                    <span class="icon">📥</span> 下载完整 USER.md
                 </button>
-                <button id="restart-btn" class="btn-secondary">再做一次</button>
+                <button id="restart-btn" class="btn-secondary">重新测评</button>
             </div>
 
             <div class="tips-section">
                 <h4>💡 如何使用</h4>
-                <p>将这个 USER.md 文件提供给你的 AI 助手，它会根据你的偏好调整沟通方式。</p>
+                <p>将下载的 USER.md 文件提供给 AI 助手，或直接将报告内容粘贴到对话开头。AI 会根据你的画像调整互动方式。</p>
             </div>
         </div>
     </div>
