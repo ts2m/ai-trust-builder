@@ -14,7 +14,18 @@ let nextId = 1;
 // 中间件
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../frontend')));
+
+// 静态文件服务 - 显式设置 MIME 类型
+const frontendPath = path.join(__dirname, '../frontend');
+app.use(express.static(frontendPath, {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.js')) {
+      res.setHeader('Content-Type', 'application/javascript');
+    } else if (filePath.endsWith('.css')) {
+      res.setHeader('Content-Type', 'text/css');
+    }
+  }
+}));
 
 // API 路由
 
