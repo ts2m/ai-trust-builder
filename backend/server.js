@@ -13,8 +13,18 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+// 确保目录存在
+const dbDir = path.join(__dirname, '../database');
+const outputDir = path.join(__dirname, '../output');
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true });
+}
+
 // 初始化数据库
-const dbPath = path.join(__dirname, '../database/trust_builder.db');
+const dbPath = path.join(dbDir, 'trust_builder.db');
 const db = new sqlite3.Database(dbPath);
 
 db.serialize(() => {
