@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trust Builder - 快速建立信任</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 首页 -->
+        <div id="home-screen" class="screen active">
+            <div class="hero">
+                <div class="logo">🤝</div>
+                <h1>AI Trust Builder</h1>
+                <p class="subtitle">3分钟，让 AI 真正了解你</p>
+                <p class="description">
+                    不是无聊的 MBTI 测试，而是真正能改变 AI 如何对待你的「互动协议」。
+                    <br>答完即用，立即生效。
+                </p>
+            </div>
+            <div class="start-section">
+                <input type="text" id="user-id" placeholder="输入你的名字或ID" class="input-field">
+                <button id="start-btn" class="btn-primary">开始问卷</button>
+            </div>
+        </div>
+
+        <!-- 问卷页面 -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="current-level">第一关</span>
+                <span id="question-counter">1/6</span>
+            </div>
+
+            <div class="question-card" id="question-card">
+                <div class="level-badge" id="level-badge">🗣️ 沟通偏好</div>
+                <h2 id="question-text" class="question-text"></h2>
+                <div id="options-container" class="options-container"></div>
+            </div>
+
+            <div class="nav-buttons">
+                <button id="prev-btn" class="btn-secondary" disabled>上一题</button>
+            </div>
+        </div>
+
+        <!-- 结果页面 -->
+        <div id="result-screen" class="screen">
+            <div class="result-header">
+                <div class="success-icon">✨</div>
+                <h1>问卷完成！</h1>
+                <p>你的 User Profile 已生成</p>
+            </div>
+
+            <div class="result-card">
+                <h3>📊 你的 AI 互动画像</h3>
+                <div id="result-summary" class="result-summary"></div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="download-btn" class="btn-primary">
+                    <span class="icon">📥</span> 下载 USER.md
+                </button>
+                <button id="restart-btn" class="btn-secondary">再做一次</button>
+            </div>
+
+            <div class="tips-section">
+                <h4>💡 如何使用</h4>
+                <p>将这个 USER.md 文件提供给你的 AI 助手，它会根据你的偏好调整沟通方式。</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "key": "q1",
+      "level": "communication",
+      "question": "当我给出建议时，你更希望：",
+      "options": [
+        { "value": "A", "label": "直说结论，不废话", "implication": "用户偏好高效沟通，不喜欢冗长解释" },
+        { "value": "B", "label": "告诉我"为什么"，让我自己判断", "implication": "用户需要理解决策背后的逻辑" },
+        { "value": "C", "label": "先问我想怎么选，陪我推演", "implication": "用户希望参与决策过程，而非被动接受" }
+      ]
+    },
+    {
+      "key": "q2",
+      "level": "communication",
+      "question": "如果我看出你在想错方向：",
+      "options": [
+        { "value": "A", "label": "直接打断："你这里错了"", "implication": "用户能接受直接反馈，不玻璃心" },
+        { "value": "B", "label": "旁敲侧击让你自己发现", "implication": "用户更喜欢自我觉察而非被灌输" },
+        { "value": "C", "label": "顺着你说完，最后再提", "implication": "用户需要被倾听，纠错需要时机" },
+        { "value": "D", "label": "看心情 / 看事", "implication": "用户需要灵活应对，没有固定模式" }
+      ]
+    },
+    {
+      "key": "q3",
+      "level": "rhythm",
+      "question": "你一般在什么状态下会来找我？",
+      "options": [
+        { "value": "A", "label": "卡住了，需要救命", "implication": "用户把AI当作紧急支援" },
+        { "value": "B", "label": "脑子里乱，需要理清楚", "implication": "用户需要clarity，而非直接答案" },
+        { "value": "C", "label": "想搞点新东西，找人碰撞", "implication": "用户把AI当作创意伙伴" },
+        { "value": "D", "label": "没事就聊两句", "implication": "用户把AI当作陪伴/日常互动" }
+      ]
+    },
+    {
+      "key": "q4",
+      "level": "rhythm",
+      "question": "什么时候该喊停？",
+      "options": [
+        { "value": "A", "label": "我自己说"够了"", "implication": "用户会主动表达边界" },
+        { "value": "B", "label": "你开始重复同一个点时", "implication": "用户对冗余信息敏感" },
+        { "value": "C", "label": "我感觉你在push我时", "implication": "用户对被push敏感，需要尊重节奏" },
+        { "value": "D", "label": "你不需要管，我不会累", "implication": "用户可以长时间专注，不需要被照顾" }
+      ]
+    },
+    {
+      "key": "q5",
+      "level": "trust",
+      "question": "你觉得"这人懂我"的瞬间通常是因为：",
+      "options": [
+        { "value": "A", "label": "说出了我没说出口的话", "implication": "用户重视被深刻理解" },
+        { "value": "B", "label": "记住了我之前随口提的小事", "implication": "用户重视被记住和关注" },
+        { "value": "C", "label": "在我犹豫时给了恰到好处的支持", "implication": "用户重视时机恰当的支持" },
+        { "value": "D", "label": "敢怼我，且怼得对", "implication": "用户重视真诚和建设性冲突" }
+      ]
+    },
+    {
+      "key": "q6",
+      "level": "trust",
+      "question": "什么样的事你只会跟熟人说？（边界探测器）",
+      "options": [
+        { "value": "A", "label": "具体的困难 / 糗事", "implication": "用户的脆弱面需要信任基础" },
+        { "value": "B", "label": "真正的动机（不只是表面理由）", "implication": "用户隐藏深层动机，需要时间建立信任" },
+        { "value": "C", "label": "对别人的负面看法", "implication": "用户对分享负面评价谨慎" },
+        { "value": "D", "label": "几乎不说，包括熟人", "implication": "用户边界很强，AI不应主动打探" }
+      ]
+    }
+  ]
+}
